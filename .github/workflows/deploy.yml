@@ -32,7 +32,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          IMAGE_URI="us-central1-docker.pkg.dev/photo-gallery-510510/photo-gallery-repo/photo-gallery:latest"
+          IMAGE_URI="europe-west1-docker.pkg.dev/photo-gallery-510510/photo-gallery-repo/photo-gallery:latest"
           docker build -t $IMAGE_URI .
           docker push $IMAGE_URI
 
@@ -40,6 +40,6 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v2
         with:
           service: photo-gallery
-          region: us-central1
-          image: us-central1-docker.pkg.dev/photo-gallery-510510/photo-gallery-repo/photo-gallery:latest
+          region: europe-west1
+          image: europe-west1-docker.pkg.dev/photo-gallery-510510/photo-gallery-repo/photo-gallery:latest
           flags: '--allow-unauthenticated'
