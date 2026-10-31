@@ -3,5 +3,5 @@ gunicorn
 google-cloud-storage
 google-cloud-firestore
 werkzeug
-#itsdangerous
+itsdangerous
 resend
